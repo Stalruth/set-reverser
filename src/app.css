@@ -1,0 +1,78 @@
+
+
+form {
+  max-width: var(--width-content);
+  display: flex;
+  flex-direction: column;
+}
+
+form > .group {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+table {
+  display: table;
+}
+
+input, select {
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+input:disabled, select:disabled {
+  color: var(--color-text-secondary);
+  background-color: var(--color-bg);
+}
+
+table td > input, table td > select {
+  margin: 0 auto 0 auto;
+}
+
+:root {
+  --color-link: #993399;
+  --color-accent: #9300fc11;
+}
+
+@media(prefers-color-scheme: dark) {
+  :root {
+    --color-accent: #9300fc22;
+    --color-bg: #222;
+    --color-bg-secondary: #555;
+    --color-link: #cc44cc;
+    --color-secondary: #e20de9;
+    --color-secondary-accent: #e20de94f;
+    --color-shadow: #bbbbbb20;
+    --color-table: #0097fc;
+    --color-text: #f7f7f7;
+    --color-text-secondary: #aaa;
+  }
+
+  button {
+    color: #111;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    padding: 0;
+  }
+
+  form {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  form > .group {
+    flex-direction: column;
+  }
+}
+
