@@ -1,12 +1,12 @@
 <script>
 import StatRow from './components/StatRow.svelte';
-import { idify, pokedex } from './lib/stats.js';
+import { idify, stats, names } from './lib/stats.js';
 import getPossibleSet from './lib/calc.js';
 
 function setBaseStats(value) {
   const id = idify(value)
-  if(Object.prototype.hasOwnProperty.call(pokedex, id)) {
-    return pokedex[id];
+  if(Object.prototype.hasOwnProperty.call(stats, id)) {
+    return stats[id];
   }
 
   return base ?? {};
@@ -221,4 +221,9 @@ $: base = setBaseStats(pokemon);
     {/if}
   </form>
 </main>
+<datalist id="pokemon">
+  {#each names as pokemon}
+  <option>{pokemon}</option>
+  {/each}
+</datalist>
 
