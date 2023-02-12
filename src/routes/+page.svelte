@@ -1,7 +1,7 @@
 <script>
-import StatRow from './components/StatRow.svelte';
-import { idify, stats, names } from './lib/stats.js';
-import getPossibleSet from './lib/calc.js';
+import StatRow from '$lib/components/StatRow.svelte';
+import { idify, stats, names } from '$lib/stats.js';
+import getPossibleSet from '$lib/calc.js';
 
 function setBaseStats(value) {
   const id = idify(value)
